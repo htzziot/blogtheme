@@ -1,0 +1,65 @@
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Copyright &copy; 2019 - 2020
+            <a target="_blank" href="http://www.beian.miit.gov.cn/">京ICP备19034965号-1</a>&nbsp;
+        </p>
+    </div>
+</footer>
+
+<!-- include(section-chart-support.html) -->
+
+<script type="text/javascript">
+    var imgApi = "{% if ext_img_api.length %}{{ ext_img_api }}{% else %}https://source.unsplash.com/random/1024x{% /if %}";
+    var imgs = document.getElementsByClassName('random-img');
+    for (var i = 0; i <= imgs.length - 1; i++) {
+        // https://picsum.photos/1024/
+        imgs[i].setAttribute("src", imgApi + (400 + i));
+    }
+</script>
+
+{% if ext_disqus_shortname.length %}
+<script type="text/javascript">
+    var disqus_shortname = '{{ ext_disqus_shortname }}';
+
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<script type="text/javascript">
+    var disqus_shortname = '{{ ext_disqus_shortname }}';
+
+    (function() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+{% /if %} {% if ext_duoshuo_shortname.length %}
+
+<script type="text/javascript">
+    var duoshuoQuery = {
+        short_name: '{{ ext_duoshuo_shortname }}'
+    };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+{% /if %} {{ siteOther }}
+
+</body>
+
+</html>

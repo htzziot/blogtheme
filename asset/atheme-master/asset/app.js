@@ -1,6 +1,6 @@
 var i18nZHData = {
-    'tran-site-categories': '<i class="fa fa-folder"></i>&nbsp;&nbsp;分类',
-    'tran-site-tags': '<i class="fa fa-tags"></i>&nbsp;&nbsp;标签',
+    'tran-site-categories': '分类',
+    'tran-site-tags': '标签',
     'tran-posted-in': '发布于',
     'tran-tags': '标签: ',
     'tran-archives': '归档',
@@ -13,7 +13,7 @@ var i18nZHData = {
     'tran-archives': '归档',
     'tran-author': '作者：',
     'tran-theme': '主题：',
-    'tran-notice': '<i class="fa fa-bullhorn"></i>&nbsp;&nbsp;Hello World！',
+    'tran-notice': 'Hello World',
     'tran-site-favoritesite': '快速链接'
 };
 
